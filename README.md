@@ -9,7 +9,7 @@ A aplicação Accounting foi desenvolvida em .NET Core 8, considerando os princ�
 ### Componentes Principais
 
 1. **API (Accounting.API):**
-   - A API é o ponto central para interações externas, responsável por registrar transações e gerar relatórios de saldos diários.
+   - A API é o ponto central para interações externas, responsável por registrar transações e gerar relatórios de saldos diários e retornar o saldo atual.
 
 2. **Azure Function (Accounting.TransactionProcessor):**
    - A Function Azure desempenha um papel crucial, processando transações assíncronas da API e atualizando o MongoDB com os saldos diários correspondentes.
