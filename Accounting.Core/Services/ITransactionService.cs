@@ -7,8 +7,6 @@ namespace Accounting.Core.Services
 	{
 		Task RegisterEntry(RegisterTransactionRequest request);
 
-		Task RegisterExit(RegisterTransactionRequest request);
-
-		Task<decimal> GetCurrentBalance();
+		Task RegisterExit(RegisterTransactionRequest request);		
 	}
 }

@@ -48,11 +48,11 @@ namespace Accounting.Tests.API
 		public async Task GetCurrentBalance_ValidRequest_ShouldReturnOkResult()
 		{
 			// Arrange
-			var mockTransactionService = new Mock<ITransactionService>();
-			mockTransactionService.Setup(x => x.GetCurrentBalance())
+			var mockReportsService = new Mock<IReportsService>();
+			mockReportsService.Setup(x => x.GetCurrentBalance())
 								  .ReturnsAsync(500);
 
-			var controller = new TransactionController(mockTransactionService.Object);
+			var controller = new ReportsController(mockReportsService.Object);
 
 			// Act
 			var result = await controller.GetCurrentBalance();

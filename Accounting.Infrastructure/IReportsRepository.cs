@@ -2,7 +2,7 @@
 
 namespace Accounting.Infrastructure
 {
-    public interface IDailyBalanceRepository
+    public interface IReportsRepository
 	{
 		Task<IEnumerable<DailyBalanceReportResponse>> GetDailyBalancesAsync(DateTime startDate, DateTime endDate);
 	}

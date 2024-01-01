@@ -15,7 +15,7 @@ namespace Accounting.Tests.API
 			var startDate = DateTime.Now.AddDays(-7);
 			var endDate = DateTime.Now;
 
-			var mockReportService = new Mock<IDailyBalanceReportService>();
+			var mockReportService = new Mock<IReportsService>();
 			mockReportService.Setup(x => x.GetDailyBalanceReportAsync(startDate, endDate))
 							 .ReturnsAsync(new List<DailyBalanceReportResponse>()); 
 
@@ -37,7 +37,7 @@ namespace Accounting.Tests.API
 			var startDate = DateTime.Now.AddDays(-7);
 			var endDate = DateTime.Now;
 
-			var mockReportService = new Mock<IDailyBalanceReportService>();
+			var mockReportService = new Mock<IReportsService>();
 			mockReportService.Setup(x => x.GetDailyBalanceReportAsync(startDate, endDate))
 							 .ThrowsAsync(new Exception("Some error message"));
 

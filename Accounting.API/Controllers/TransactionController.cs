@@ -42,21 +42,6 @@ namespace Accounting.API.Controllers
 			{
 				return BadRequest(ex.Message);
 			}
-		}
-
-		[HttpGet("CurrentBalance")]
-		public async Task<IActionResult> GetCurrentBalance()
-		{
-			try
-			{
-				var result = await _transactionService.GetCurrentBalance();
-
-				return Ok(result);
-			}
-			catch (Exception ex)
-			{
-				return StatusCode(500, $"Error while retrieving the current balance.: {ex.Message}");
-			}
-		}
+		}		
 	}
 }

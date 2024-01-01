@@ -55,14 +55,7 @@ namespace Accounting.Application.Services
 			{
 				throw new InvalidOperationException("Invalid transaction or insufficient funds.");
 			}
-		}
-
-		public async Task<decimal> GetCurrentBalance()
-		{
-			decimal currentBalance = await _transactionRepository.GetCurrentBalance();
-
-			return currentBalance;
-		}
+		}		
 
 		private async Task SendTransactionToQueue(Transaction transaction)
 		{

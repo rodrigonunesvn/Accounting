@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Accounting.Infrastructure
 {
-    public class DailyBalanceRepository : IDailyBalanceRepository
+    public class ReportsRepository : IReportsRepository
 	{
 		private readonly IMongoDbContext _mongoDbContext;
 
-		public DailyBalanceRepository(IMongoDbContext mongoDbContext)
+		public ReportsRepository(IMongoDbContext mongoDbContext)
 		{
 			_mongoDbContext = mongoDbContext;
 		}

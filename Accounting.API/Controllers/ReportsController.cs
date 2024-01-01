@@ -1,4 +1,5 @@
-﻿using Accounting.Core.DTO.Response;
+﻿using Accounting.Application.Services;
+using Accounting.Core.DTO.Response;
 using Accounting.Core.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,9 +9,9 @@ namespace Accounting.API.Controllers
 	[ApiController]
 	public class ReportsController : ControllerBase
 	{
-		private readonly IDailyBalanceReportService _dailyBalanceReportService;
+		private readonly IReportsService _dailyBalanceReportService;
 
-		public ReportsController(IDailyBalanceReportService dailyBalanceReportService)
+		public ReportsController(IReportsService dailyBalanceReportService)
 		{
 			_dailyBalanceReportService = dailyBalanceReportService;
 		}
@@ -28,6 +29,21 @@ namespace Accounting.API.Controllers
 			catch (Exception ex)
 			{
 				return StatusCode(500, $"Error while retrieving the daily balance report.: {ex.Message}");
+			}
+		}
+
+		[HttpGet("CurrentBalance")]
+		public async Task<IActionResult> GetCurrentBalance()
+		{
+			try
+			{
+				var result = await _dailyBalanceReportService.GetCurrentBalance();
+
+				return Ok(result);
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, $"Error while retrieving the current balance.: {ex.Message}");
 			}
 		}
 	}

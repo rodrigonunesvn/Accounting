@@ -33,12 +33,12 @@ var queueName = builder.Configuration["ServiceBusQueueName"];
 builder.Services.AddSingleton<IQueueClient>(x => new QueueClient(serviceBusConnectionString, queueName));
 
 builder.Services.AddScoped<ITransactionCacheManager, TransactionCacheManager>();
-builder.Services.AddScoped<IDailyBalanceRepository, DailyBalanceRepository>();
+builder.Services.AddScoped<IReportsRepository, ReportsRepository>();
 builder.Services.AddScoped<ITransactionRepository, TransactionRepository>();
 builder.Services.AddScoped<ITransactionService, TransactionService>();
 builder.Services.AddScoped<ITransactionValidationService, TransactionValidationService>();
-builder.Services.AddScoped<IDailyBalanceReportService, DailyBalanceReportService>();
-builder.Services.AddScoped<IDailyBalanceRepository, DailyBalanceRepository>();
+builder.Services.AddScoped<IReportsService, ReportsService>();
+builder.Services.AddScoped<IReportsRepository, ReportsRepository>();
 
 var app = builder.Build();
 
