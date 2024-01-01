@@ -13,6 +13,7 @@ A aplicação Accounting foi desenvolvida em .NET Core 8, considerando os princ�
 
 2. **Azure Function (Accounting.TransactionProcessor):**
    - A Function Azure desempenha um papel crucial, processando transações assíncronas da API e atualizando o MongoDB com os saldos diários correspondentes.
+     ![image](https://github.com/rodrigonunesvn/Accounting/assets/51245767/289f3f2b-fd66-4466-816e-f7469667a0f0)
 
 ### Componentes de Infraestrutura
 
