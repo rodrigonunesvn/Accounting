@@ -69,28 +69,28 @@ A aplicação Accounting foi desenvolvida em .NET Core 8, considerando os princ�
 
 1. **Registrar Transação de Entrada:**
 
-curl -X POST \
-  http://localhost/api/transactions/entry \
-  -H 'Content-Type: application/json' \
-  -d '{
-    "amount": 100.00
-  }'
+   curl -X POST \
+     http://localhost/api/transactions/entry \
+     -H 'Content-Type: application/json' \
+     -d '{
+       "amount": 100.00
+     }'
 
 2. **Registrar Transação de Saída:**
 
-curl -X POST \
-  http://localhost/api/transactions/exit \
-  -H 'Content-Type: application/json' \
-  -d '{
-    "amount": 50.00
-  }'
+   curl -X POST \
+     http://localhost/api/transactions/exit \
+     -H 'Content-Type: application/json' \
+     -d '{
+       "amount": 50.00
+     }'
 
 3. **API de saldo diário:**
 
-curl -X GET \
-  'http://localhost/api/reports/DailyBalance?startDate=2023-01-01'&endDate=2023-12-01
+   curl -X GET \
+     'http://localhost/api/reports/DailyBalance?startDate=2023-01-01'&endDate=2023-12-01
 
 4. **API de saldo atual:**
 
-curl -X GET \
-  'http://localhost/api/reports/CurrentBalanca
+   curl -X GET \
+     'http://localhost/api/reports/CurrentBalanca
