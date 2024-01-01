@@ -89,45 +89,31 @@ A aplicação Accounting foi desenvolvida em .NET Core 8, considerando os princ�
 
 Esse arquivo é um arquivo de configuração que geralmente é utilizado em projetos .NET Core. Ele contém informações sensíveis, como strings de conexão para bancos de dados e serviços. Aqui está um guia passo a passo para configurar este arquivo:
 
-ConnectionStrings:
+**ConnectionStrings:**
 
 Preencha as strings de conexão para os diferentes serviços:
-SQLServerConnectionString: Forneça a string de conexão para o SQL Server.
-ServiceBusConnectionString: Forneça a string de conexão para o Azure Service Bus.
-MongoDBConnectionString: Forneça a string de conexão para o MongoDB.
-ServiceBusQueueName:
 
-Defina o nome da fila do Azure Service Bus que será usada para comunicação assíncrona.
-MongoDBDatabaseName:
-
-Especifique o nome do banco de dados MongoDB que será usado.
-Logging:
-
-Configure os níveis de log para diferentes categorias. Neste exemplo, o nível padrão é "Information", e o nível para mensagens relacionadas ao Microsoft.AspNetCore é definido como "Warning".
-AllowedHosts:
-
-Especifica quais hosts estão autorizados a acessar a aplicação. O valor "*" permite que qualquer host acesse. Você pode ajustar isso conforme necessário para a segurança da sua aplicação.
-Aqui está uma versão preenchida do arquivo de configuração:
+**SQLServerConnectionString:** Forneça a string de conexão para o SQL Server.
+**ServiceBusConnectionString:** Forneça a string de conexão para o Azure Service Bus.
+**MongoDBConnectionString:** Forneça a string de conexão para o MongoDB.
+**ServiceBusQueueName:** Defina o nome da fila do Azure Service Bus que será usada para comunicação assíncrona.
+**MongoDBDatabaseName:** Especifique o nome do banco de dados MongoDB que será usado.
 
 ### 4. Ajuste o arquivo Accounting.TransactionProcessor\local.settings.json 
 
-AzureWebJobsStorage:
-
+**AzureWebJobsStorage:**
 Define a string de conexão para o armazenamento do Azure que será usado pelo Azure Functions. No ambiente de desenvolvimento, está configurado para usar o armazenamento local (UseDevelopmentStorage=true). Em um ambiente de produção, isso seria configurado para o armazenamento real do Azure.
 
-FUNCTIONS_WORKER_RUNTIME:
-
+**FUNCTIONS_WORKER_RUNTIME:**
 Indica qual runtime o Azure Functions deve usar. Neste caso, está configurado como dotnet, indicando que a runtime do .NET Core será usada.
 
-ServiceBusConnectionString:
-
+**ServiceBusConnectionString:**
 Define a string de conexão para o Azure Service Bus. Esta é a string que a função usará para se conectar ao serviço de barramento de serviço Azure.
 
-SqlServerConnectionString:
-
+**SqlServerConnectionString:**
 Define a string de conexão para o SQL Server. Esta é a string que a função usará para se conectar ao banco de dados SQL Server.
-MongoDbConnectionString:
 
+**MongoDbConnectionString:**
 Define a string de conexão para o MongoDB. Esta é a string que a função usará para se conectar ao banco de dados MongoDB.
 
 ### 5. Configuração do Docker   
