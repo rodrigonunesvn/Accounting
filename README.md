@@ -1,11 +1,10 @@
 # Accounting
 
-**Descrição do Projeto:**
 Sistema para registro de entradas e saídas de valores, com funcionalidade para calcular saldos diários.
 
 ## Arquitetura da Solução
 
-A aplicação Accounting foi cuidadosamente desenvolvida em .NET Core 8, considerando os princípios da arquitetura Clean Code. A arquitetura limpa prioriza a legibilidade, manutenibilidade e escalabilidade do código, resultando em um sistema robusto e fácil de evoluir.
+A aplicação Accounting foi desenvolvida em .NET Core 8, considerando os princípios da arquitetura Clean Code. A arquitetura limpa prioriza a legibilidade, manutenibilidade e escalabilidade do código, resultando em um sistema robusto e fácil de evoluir.
 
 ### Componentes Principais
 
