@@ -1,6 +1,6 @@
 # Accounting
 
-Sistema para registro de entradas e saídas de valores, com funcionalidade para calcular saldos diários.
+Sistema para registro de entradas e saídas de valores, com funcionalidade para calcular e retornar saldos diários e o saldo atual.
 
 ## Arquitetura da Solução
 
