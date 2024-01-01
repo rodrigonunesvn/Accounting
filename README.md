@@ -145,7 +145,7 @@ Acesse a API em http://localhost:5000.
 1. **Registrar Transação de Entrada:**
 
    curl -X POST \
-     http://localhost/api/transactions/entry \
+     http://localhost:5000/api/transactions/entry \
      -H 'Content-Type: application/json' \
      -d '{
        "amount": 100.00
@@ -154,7 +154,7 @@ Acesse a API em http://localhost:5000.
 2. **Registrar Transação de Saída:**
 
    curl -X POST \
-     http://localhost/api/transactions/exit \
+     http://localhost:5000/api/transactions/exit \
      -H 'Content-Type: application/json' \
      -d '{
        "amount": 50.00
@@ -163,9 +163,9 @@ Acesse a API em http://localhost:5000.
 3. **API de saldo diário:**
 
    curl -X GET \
-     'http://localhost/api/reports/DailyBalance?startDate=2023-01-01'&endDate=2023-12-01
+     'http://localhost:5000/api/reports/DailyBalance?startDate=2023-01-01'&endDate=2023-12-01
 
 4. **API de saldo atual:**
 
    curl -X GET \
-     'http://localhost/api/reports/CurrentBalanca
+     'http://localhost:5000/api/reports/CurrentBalanca
