@@ -61,7 +61,7 @@ curl -X POST \
 curl -X GET \
   'http://localhost/api/reports/DailyBalance?startDate=2023-01-01'&endDate=2023-12-01
 
-3. **API de saldo atual:**
+4. **API de saldo atual:**
 
 curl -X GET \
   'http://localhost/api/reports/CurrentBalanca
