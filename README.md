@@ -61,7 +61,7 @@ A aplicação Accounting foi desenvolvida em .NET Core 8, considerando os princ�
 
 - A aplicação é submetida a um conjunto de testes unitários utilizando xUnit, garantindo robustez e cobertura completa.
 
-# Executando a Aplicação Localmente
+# Executando a Aplicação 
 
 ## Requisitos
 
