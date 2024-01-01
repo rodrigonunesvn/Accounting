@@ -85,6 +85,29 @@ A aplicação Accounting foi desenvolvida em .NET Core 8, considerando os princ�
    cd Accounting
    ```
 
+### 3. Ajuste o arquivo Accounting.API\appseggings.json 
+Esse arquivo é um arquivo de configuração que geralmente é utilizado em projetos .NET Core. Ele contém informações sensíveis, como strings de conexão para bancos de dados e serviços. Aqui está um guia passo a passo para configurar este arquivo:
+
+ConnectionStrings:
+
+Preencha as strings de conexão para os diferentes serviços:
+SQLServerConnectionString: Forneça a string de conexão para o SQL Server.
+ServiceBusConnectionString: Forneça a string de conexão para o Azure Service Bus.
+MongoDBConnectionString: Forneça a string de conexão para o MongoDB.
+ServiceBusQueueName:
+
+Defina o nome da fila do Azure Service Bus que será usada para comunicação assíncrona.
+MongoDBDatabaseName:
+
+Especifique o nome do banco de dados MongoDB que será usado.
+Logging:
+
+Configure os níveis de log para diferentes categorias. Neste exemplo, o nível padrão é "Information", e o nível para mensagens relacionadas ao Microsoft.AspNetCore é definido como "Warning".
+AllowedHosts:
+
+Especifica quais hosts estão autorizados a acessar a aplicação. O valor "*" permite que qualquer host acesse. Você pode ajustar isso conforme necessário para a segurança da sua aplicação.
+Aqui está uma versão preenchida do arquivo de configuração:
+
 ### 3. Configuração do Docker   
    Inicialize os serviços do Docker necessários para a aplicação.
    ```bash
