@@ -13,7 +13,37 @@ A aplicação Accounting foi desenvolvida em .NET Core 8, considerando os princ�
 
 2. **Azure Function (Accounting.TransactionProcessor):**
    - A Function Azure desempenha um papel crucial, processando transações assíncronas da API e atualizando o MongoDB com os saldos diários correspondentes.
-     
+
+## Camadas da Arquitetura
+
+### Camada API:
+- **Responsabilidades:**
+  - Lida com solicitações HTTP e fornece respostas.
+  - Mapeia parâmetros da solicitação para objetos de domínio e chama serviços apropriados.
+  - Lida com autenticação, autorização e validação de entrada.
+  - Atua como interface de comunicação externa da aplicação.
+
+### Camada Application:
+- **Responsabilidades:**
+  - Contém lógica de aplicação específica.
+  - Orquestra serviços do domínio para realizar operações mais complexas.
+  - Mapeia objetos de entrada e saída para objetos de domínio.
+  - Não contém lógica de negócios, mas coordena a execução de serviços de domínio.
+
+### Camada Core (Domínio):
+- **Responsabilidades:**
+  - Contém lógica de negócios e regras do domínio.
+  - Representa o cerne da aplicação, independente de qualquer detalhe de implementação.
+  - Define entidades, agregados, valor-objetos e interfaces de repositório.
+  - Não possui dependências externas.
+
+### Camada Infrastructure:
+- **Responsabilidades:**
+  - Implementa detalhes de infraestrutura, como acesso a banco de dados, serviços externos, logging, etc.
+  - Contém implementações de repositórios definidos no domínio.
+  - Fornece meios de comunicação com o mundo externo.
+  - Depende das camadas mais internas, mas não contém lógica de negócios.
+
 ![image](https://github.com/rodrigonunesvn/Accounting/assets/51245767/289f3f2b-fd66-4466-816e-f7469667a0f0)
 
 ### Componentes de Infraestrutura
