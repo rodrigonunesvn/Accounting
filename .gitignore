@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/Accounting.API/bin/Debug/net8.0
+/Accounting.API/obj
+/Accounting.Application/bin/Debug/net8.0
+/Accounting.Application/obj
+/Accounting.Core/bin/Debug/net8.0
+/Accounting.Core/obj
+/Accounting.Infrastructure/bin/Debug/net8.0
+/Accounting.Infrastructure/obj
+/Accounting.Tests/bin
+/Accounting.Tests/obj
+/Accounting.TransactionProcessor.Tests/bin
+/Accounting.TransactionProcessor.Tests/obj

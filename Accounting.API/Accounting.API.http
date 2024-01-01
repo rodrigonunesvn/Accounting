@@ -1,0 +1,6 @@
+@Accounting.API_HostAddress = http://localhost:5010
+
+GET {{Accounting.API_HostAddress}}/transaction/
+Accept: application/json
+
+###
