@@ -61,6 +61,40 @@ A aplicação Accounting foi desenvolvida em .NET Core 8, considerando os princ�
 
 - A aplicação é submetida a um conjunto de testes unitários utilizando xUnit, garantindo robustez e cobertura completa.
 
+# Executando a Aplicação Localmente
+
+## Requisitos
+
+1. **SDK do .NET Core:**
+   - Baixe e instale o SDK do .NET Core em [dotnet.microsoft.com](https://dotnet.microsoft.com/download).
+
+2. **Docker:**
+   - Instale o Docker a partir de [docker.com](https://www.docker.com/products/docker-desktop).
+
+3. **Ferramentas Adicionais:**
+   - Certifique-se de ter o Git e o cURL instalados.
+
+## Passos
+
+### 1. Clone o Repositório
+   ```bash
+   git clone https://github.com/rodrigonunesvn/Accounting
+   
+### 2. Acesse o Diretório do Projeto
+   cd Accounting
+
+### 3. Configuração do Docker
+Inicialize os serviços do Docker necessários para a aplicação.
+	```docker-compose up -d
+	
+### 4. Build e Execução da Aplicação
+No diretório do projeto principal:
+	```cd src/Accounting.API
+	dotnet build
+	dotnet run
+	
+Acesse a API em http://localhost:5000.
+
 ## Utilização da Aplicação
 
 ### APIs
