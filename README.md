@@ -163,7 +163,7 @@ Acesse a API em http://localhost:5000.
 3. **API de saldo diário:**
 
    curl -X GET \
-     'http://localhost:5000/api/reports/DailyBalance?startDate=2023-01-01'&endDate=2023-12-01
+     'http://localhost:5000/api/reports/DailyBalance?startDate=2023-01-01&endDate=2023-12-01
 
 4. **API de saldo atual:**
 
