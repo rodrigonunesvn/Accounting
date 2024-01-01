@@ -20,7 +20,6 @@ A aplicação Accounting foi desenvolvida em .NET Core 8, considerando os princ�
 - **Responsabilidades:**
   - Lida com solicitações HTTP e fornece respostas.
   - Mapeia parâmetros da solicitação para objetos de domínio e chama serviços apropriados.
-  - Lida com autenticação, autorização e validação de entrada.
   - Atua como interface de comunicação externa da aplicação.
 
 ### Camada Application:
@@ -28,11 +27,9 @@ A aplicação Accounting foi desenvolvida em .NET Core 8, considerando os princ�
   - Contém lógica de aplicação específica.
   - Orquestra serviços do domínio para realizar operações mais complexas.
   - Mapeia objetos de entrada e saída para objetos de domínio.
-  - Não contém lógica de negócios, mas coordena a execução de serviços de domínio.
 
 ### Camada Core (Domínio):
 - **Responsabilidades:**
-  - Contém lógica de negócios e regras do domínio.
   - Representa o cerne da aplicação, independente de qualquer detalhe de implementação.
   - Define entidades, agregados, valor-objetos e interfaces de repositório.
   - Não possui dependências externas.
