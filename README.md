@@ -94,9 +94,13 @@ Esse arquivo é um arquivo de configuração que geralmente é utilizado em proj
 Preencha as strings de conexão para os diferentes serviços:
 
 **SQLServerConnectionString:** Forneça a string de conexão para o SQL Server.
+
 **ServiceBusConnectionString:** Forneça a string de conexão para o Azure Service Bus.
+
 **MongoDBConnectionString:** Forneça a string de conexão para o MongoDB.
+
 **ServiceBusQueueName:** Defina o nome da fila do Azure Service Bus que será usada para comunicação assíncrona.
+
 **MongoDBDatabaseName:** Especifique o nome do banco de dados MongoDB que será usado.
 
 ### 4. Ajuste o arquivo Accounting.TransactionProcessor\local.settings.json 
