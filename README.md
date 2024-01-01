@@ -81,20 +81,23 @@ A aplicação Accounting foi desenvolvida em .NET Core 8, considerando os princ�
    git clone https://github.com/rodrigonunesvn/Accounting
    ```
 ### 2. Acesse o Diretório do Projeto
+   ```bash
+   cd Accounting
+   ```
 
-```cd Accounting```
-
-### 3. Configuração do Docker
-Inicialize os serviços do Docker necessários para a aplicação.
-
-	```docker-compose up -d```
+### 3. Configuração do Docker   
+   Inicialize os serviços do Docker necessários para a aplicação.
+   ```bash
+   docker-compose up -d
+   ```
 	
 ### 4. Build e Execução da Aplicação
 No diretório do projeto principal:
-
-	```cd src/Accounting.API
-	dotnet build
-	dotnet run```
+   ```bash
+   cd src/Accounting.API
+   dotnet build
+   dotnet run
+   ```
 	
 Acesse a API em http://localhost:5000.
 
